@@ -20,14 +20,49 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install flask flask-sqlalchemy flask-cors psycopg2-binary python-dotenv
 ```
 
-### 3. Set Up the Database
+## Step 3: Set Up the Database
+
+### Create a PostgreSQL Database
+
+**On Windows:**
 
 ```shellscript
-# Create the database
-createdb agritech
+# Open PostgreSQL command prompt (SQL Shell)
+# Enter your PostgreSQL credentials when prompted
 
-# Run the schema script
-psql -d agritech -f database/schema.sql
+# Create a database
+CREATE DATABASE agritech;
+
+# Create a user (optional)
+CREATE USER agritech_user WITH PASSWORD 'your_password';
+GRANT ALL PRIVILEGES ON DATABASE agritech TO agritech_user;
+```
+
+**On macOS/Linux:**
+
+```shellscript
+# Access PostgreSQL command line
+sudo -u postgres psql
+
+# Create a database
+CREATE DATABASE agritech;
+
+# Create a user (optional)
+CREATE USER agritech_user WITH PASSWORD 'your_password';
+GRANT ALL PRIVILEGES ON DATABASE agritech TO agritech_user;
+
+# Exit PostgreSQL
+\q
+```
+
+### Initialize the Database Schema
+
+```shellscript
+# Run the schema SQL script
+psql -U agritech_user -d agritech -f database/schema.sql
+
+# If using the postgres user (on macOS/Linux)
+sudo -u postgres psql -d agritech -f database/schema.sql
 ```
 
 ### 4. Run the Application
