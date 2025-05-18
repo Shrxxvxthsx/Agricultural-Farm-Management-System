@@ -65,43 +65,26 @@ psql -U agritech_user -d agritech -f database/schema.sql
 sudo -u postgres psql -d agritech -f database/schema.sql
 ```
 
-### 4. Run the Application
+### 4. ## Run the Flask Backend
+
+Navigate to the backend directory and run the Flask application:
 
 ```shellscript
-# Start the Flask server
-python backend/app.py
+# Navigate to the backend directory
+cd backend
+
+# Run the Flask application
+python app.py
 ```
 
-Visit `http://localhost:5000` in your browser to see the application.
+If you have a run.py file in the root directory, you can also use:
 
-## Key Differences from the Original Project
+```shellscript
+# From the project root
+python run.py
+```
 
-1. **Architecture**:
-
-1. Original: Next.js with TypeScript, Server Components, and API Routes
-2. New: Separate HTML/CSS/JS frontend with Python Flask backend
-
-
-
-2. **Frontend**:
-
-1. Original: React components with TypeScript
-2. New: Plain HTML, CSS, and vanilla JavaScript
-
-
-
-3. **Backend**:
-
-1. Original: Next.js API Routes with TypeScript
-2. New: Python Flask with SQLAlchemy
-
-
-
-4. **Database Access**:
-
-1. Original: Server Actions and API Routes
-2. New: RESTful API endpoints in Flask
-
+You should see output indicating that the Flask server is running, typically on [http://localhost:5000](http://localhost:5000).
 
 
 5. **Styling**:
