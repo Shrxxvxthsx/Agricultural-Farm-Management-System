@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriTech - Agriculture E-Commerce & Management</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-leaf"></i>
+                    <span>AgriTech</span>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="farm-management.html">Farm Management</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Grow Your Farm Business with AgriTech</h1>
+                    <p>Your one-stop solution for agricultural e-commerce and farm management. Buy quality products and manage your farm efficiently.</p>
+                    <div class="hero-buttons">
+                        <a href="products.html" class="btn btn-primary">Shop Products <i class="fas fa-arrow-right"></i></a>
+                        <a href="farm-management.html" class="btn btn-outline">Farm Management</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="static/images/farm-field.jpg" alt="Farm field with tractor">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Everything you need to manage your agricultural business in one place</p>
+            </div>
+            <div class="services-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-tractor"></i>
+                        <h3>Farm Management</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Track crops, monitor soil health, and manage your farm operations efficiently.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="farm-management.html" class="btn-text">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>E-Commerce</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Buy seeds, equipment, fertilizers, and other agricultural products online.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="products.html" class="btn-text">Shop now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Community</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Connect with other farmers, share knowledge, and learn best practices.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="community.html" class="btn-text">Join now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Explore our top agricultural products</p>
+            </div>
+            <div class="products-grid" id="featured-products">
+                <!-- Products will be loaded here via JavaScript -->
+                <div class="loading">Loading products...</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AgriTech. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+    <script src="static/js/products.js"></script>
+</body>
+</html>
